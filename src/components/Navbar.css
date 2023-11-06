@@ -147,6 +147,22 @@ nav {
     margin-bottom: 0;
   }
 
+  .NavLinks-Link > a {
+    position: relative;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .NavLinks-Link > a:hover::after {
+    position: absolute;
+    content: "";
+    display: block;
+    left: 0;
+    bottom: -4.5rem;
+    height: 5px;
+    width: 100%;
+    background-color: var(--color-site-4);
+  }
+
   .NavBtn {
     background: linear-gradient(
       100deg,
@@ -166,5 +182,12 @@ nav {
 
   .NavBtn:hover {
     filter: brightness(150%);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .NavLinks,
+  .NavLinks.open {
+    gap: 4rem;
   }
 }

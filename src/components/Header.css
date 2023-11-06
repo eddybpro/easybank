@@ -96,6 +96,7 @@ header {
     background-size: 70% 80%;
     background-position: top -38% right -35%;
     background-repeat: no-repeat;
+    background-color: var(--color-site-1);
   }
 
   .HeaderWrapper {
