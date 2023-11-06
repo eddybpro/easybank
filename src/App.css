@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap");
+
+:root {
+  --color-brand-1: hsl(233, 26%, 24%);
+  --color-brand-2: hsl(233, 8%, 62%);
+
+  --color-site-1: hsl(0, 0%, 98%);
+  --color-site-2: hsl(220, 16%, 96%);
+  --color-site-3: hsl(0, 0%, 100%);
+  --color-site-4: hsl(136, 65%, 51%);
+  --color-site-5: hsl(192, 70%, 51%);
+
+  --font-public-sans: "Be Vietnam Pro", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-public-sans);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  width: 100%;
+}
+
+main {
+  background-color: var(--color-site-2);
+  padding: 6rem 0 3rem;
+}
+
+.FeaturesWrapper-FirstPart {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.FeaturesWrapper-FirstPart-Title {
+  font-size: 3.5rem;
+  font-weight: 500;
+  color: var(--color-brand-1);
+  margin-bottom: 2rem;
+}
+
+.FeaturesWrapper-FirstPart-Para {
+  font-size: 1.6rem;
+  color: var(--color-brand-2);
+  margin-bottom: 2rem;
+}
+
+.FeaturesWrapper-FeaturesBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  flex-direction: column;
+}
+
+.ArticlesWrapper {
+  background-color: var(--color-site-1);
+  padding: 3rem 1.5rem;
+}
+
+.ArticlesWrapper-Title {
+  font-size: 3.5rem;
+  color: var(--color-brand-1);
+  margin-bottom: 3rem;
+  text-align: center;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.ArticlesWrapper-ArticlesBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 600px) {
+  .FeaturesWrapper-FirstPart {
+    text-align: left;
+  }
+
+  .FeaturesWrapper-FirstPart-Title {
+    font-size: 4rem;
+  }
+
+  .FeaturesWrapper-FirstPart-Para {
+    max-width: 60rem;
+  }
+
+  .FeaturesWrapper-FeaturesBox,
+  .ArticlesWrapper-ArticlesBox {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .ArticlesWrapper-Title {
+    font-size: 4rem;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .FeaturesWrapper-FeaturesBox,
+  .ArticlesWrapper-ArticlesBox {
+    grid-template-columns: repeat(4, 1fr);
+    padding-bottom: 6rem;
+  }
+
+  .FeaturesWrapper-FirstPart-Title,
+  .ArticlesWrapper-Title {
+    font-size: 5rem;
+  }
+}

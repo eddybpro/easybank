@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap");
+
+:root {
+  --color-brand-1: hsl(233, 26%, 24%);
+  --color-brand-2: hsl(233, 8%, 62%);
+
+  --color-site-1: hsl(0, 0%, 98%);
+  --color-site-2: hsl(220, 16%, 96%);
+  --color-site-3: hsl(0, 0%, 100%);
+  --color-site-4: hsl(136, 65%, 51%);
+  --color-site-5: hsl(192, 70%, 51%);
+
+  --font-public-sans: "Be Vietnam Pro", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-public-sans);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+header {
+  background: url("../assets/bg-intro-mobile.svg");
+  background-size: 100% 48rem;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.HeaderWrapper-ImgBox {
+  width: 100%;
+  overflow: hidden;
+}
+
+.HeaderWrapper-ImgBox > img {
+  width: 100%;
+  transform: translateY(-30%);
+}
+
+.HeaderWrapper-TxtBox {
+  text-align: center;
+  padding: 0 2rem 3rem;
+}
+
+.HeaderWrapper-TxtBox-Title {
+  font-size: 3.5rem;
+  font-weight: 500;
+  color: var(--color-brand-1);
+  margin-bottom: 2rem;
+}
+
+.HeaderWrapper-TxtBox-Para {
+  font-size: 1.6rem;
+  color: var(--color-brand-2);
+  margin-bottom: 2rem;
+}
+
+.HeaderWrapper-TxtBox-Btn {
+  padding: 1.5rem 2.5rem;
+  border-radius: 2rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: linear-gradient(100deg, var(--color-site-4), var(--color-site-5));
+  font-size: 1.6rem;
+  color: var(--color-site-3);
+  transition: all 0.2s ease-in-out;
+}
+
+.HeaderWrapper-TxtBox-Btn:hover {
+  filter: brightness(150%);
+}
+
+@media screen and (min-width: 600px) {
+  .HeaderWrapper-TxtBox-Title {
+    font-size: 4rem;
+    max-width: 60rem;
+    margin: -16rem auto 2rem;
+  }
+
+  .HeaderWrapper-TxtBox-Para {
+    max-width: 60rem;
+    margin: 0 auto 2rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  header {
+    background: url("../assets/bg-intro-desktop.svg");
+    background-size: 70% 80%;
+    background-position: top -38% right -35%;
+    background-repeat: no-repeat;
+  }
+
+  .HeaderWrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    grid-auto-flow: dense;
+    justify-content: center;
+  }
+
+  .HeaderWrapper-ImgBox {
+    grid-column: 2;
+  }
+
+  .HeaderWrapper-ImgBox > img {
+    transform: translate(18%, -20%);
+  }
+
+  .HeaderWrapper-TxtBox {
+    grid-column: 1;
+    text-align: left;
+  }
+
+  .HeaderWrapper-TxtBox-Title {
+    font-size: 5rem;
+    max-width: 40rem;
+    margin: -16rem 0 2rem;
+  }
+
+  .HeaderWrapper-TxtBox-Para {
+    max-width: 50rem;
+    margin: 0 0 2rem;
+  }
+}

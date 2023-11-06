@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap");
+
+:root {
+  --color-brand-1: hsl(233, 26%, 24%);
+  --color-brand-2: hsl(233, 8%, 62%);
+
+  --color-site-1: hsl(0, 0%, 98%);
+  --color-site-2: hsl(220, 16%, 96%);
+  --color-site-3: hsl(0, 0%, 100%);
+  --color-site-4: hsl(136, 65%, 51%);
+  --color-site-5: hsl(192, 70%, 51%);
+
+  --font-public-sans: "Be Vietnam Pro", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-public-sans);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+ul {
+  list-style: none;
+}
+
+footer {
+  padding: 3rem 2rem;
+  text-align: center;
+  background-color: var(--color-brand-1);
+}
+
+.FooterLogo {
+  display: inline-block;
+  margin-bottom: 2.5rem;
+  width: 14rem;
+}
+
+.FooterLogo > img {
+  width: 100%;
+  filter: invert(100%) sepia(10%) saturate(49%) hue-rotate(171deg)
+    brightness(112%) contrast(96%);
+}
+
+.SocialIcons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.socialIcon {
+  font-size: 3rem;
+  color: var(--color-site-3);
+  transition: all 0.2s ease-in-out;
+}
+
+.socialIcon:hover {
+  color: var(--color-site-4);
+}
+
+.FooterLinks {
+  margin-bottom: 2rem;
+}
+
+.FooterLinks-List-Link {
+  margin-bottom: 1.5rem;
+}
+
+.FooterLinks-List-Link > a {
+  font-size: 1.6rem;
+  color: var(--color-site-3);
+  text-transform: capitalize;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.FooterLinks-List-Link > a:hover {
+  color: var(--color-site-4);
+}
+
+.FooterBtn {
+  background: linear-gradient(100deg, var(--color-site-4), var(--color-site-5));
+  padding: 1.5rem 2.5rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 2rem;
+  font-size: 1.6rem;
+  color: var(--color-site-3);
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.FooterBtn:hover {
+  filter: brightness(150%);
+}
+
+.Copyright {
+  font-size: 1.6rem;
+  color: var(--color-brand-2);
+}
+
+@media screen and (min-width: 600px) {
+  footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+  }
+
+  .SocialIcons {
+    margin-right: auto;
+  }
+
+  .FooterLinks {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+    text-align: left;
+  }
+
+  .FooterBtn {
+    grid-area: 1/2/2/2;
+    max-width: 30rem;
+    margin-left: auto;
+  }
+
+  .Copyright {
+    grid-area: 3/1/3/3;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  footer {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: 4rem;
+  }
+
+  .FooterLogo {
+    grid-area: 1/1/1/1;
+  }
+
+  .FooterLinks {
+    grid-area: 1/2/3/2;
+  }
+
+  .SocialIcons {
+    grid-area: 2/1/2/2;
+  }
+
+  .FooterBtn {
+    grid-area: 1/3/1/3;
+  }
+
+  .Copyright {
+    grid-area: 2/3/2/3;
+    margin-left: auto;
+  }
+}
